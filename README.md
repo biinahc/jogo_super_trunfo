@@ -112,42 +112,6 @@ Soma Japao (Populacao + PIB (USD)): 125700000.00
 
 ---
 
-
-
-## Fluxograma do Programa
-
-O fluxograma abaixo ilustra a lógica principal do programa:
-
-```mermaid
-graph TD
-    A[Início] --> B(Definir Cartas e Calcular Atributos);
-    B --> C{Exibir Menu Atributo 1};
-    C --> D[Ler Escolha 1];
-    D --> E{Escolha 1 Válida? (1-5)};
-    E -- Não --> C;
-    E -- Sim --> F{Exibir Menu Atributo 2 (exclui Escolha 1)};
-    F --> G[Ler Escolha 2];
-    G --> H{Escolha 2 Válida? (1-5 e != Escolha 1)};
-    H -- Não --> F;
-    H -- Sim --> I(Comparar Cartas - Atributo 1);
-    I --> J(Comparar Cartas - Atributo 2);
-    J --> K(Calcular Soma Atributos Carta 1);
-    K --> L(Calcular Soma Atributos Carta 2);
-    L --> M{Soma Carta 1 > Soma Carta 2?};
-    M -- Sim --> N[Declarar Carta 1 Vencedora];
-    M -- Não --> O{Soma Carta 2 > Soma Carta 1?};
-    O -- Sim --> P[Declarar Carta 2 Vencedora];
-    O -- Não --> Q[Declarar Empate];
-    N --> R(Exibir Resultados Detalhados e Finais);
-    P --> R;
-    Q --> R;
-    R --> S[Fim];
-```
-
----
-
-
-
 ## Guia Passo a Passo: Baixando e Rodando o Jogo
 
 Se você é novo na compilação de programas C, siga estes passos detalhados:
