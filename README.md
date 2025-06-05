@@ -1,0 +1,1 @@
+# jogo_super_trunfo
